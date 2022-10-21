@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="729.0" prefWidth="859.0" style="-fx-background-color: fdb5ff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.laba5.HelloController">
+    <children>
+        <AnchorPane layoutX="-1.0" layoutY="77.0" prefHeight="651.0" prefWidth="859.0" style="-fx-background-color: ffecff;">
+            <children>
+                <TextField fx:id="txtDatabase" layoutX="15.0" layoutY="51.0" promptText="enter database" style="-fx-background-color: ffffff;" />
+                <TextField fx:id="txttablename" layoutX="15.0" layoutY="101.0" style="-fx-background-color: ffffff;" />
+                <Label layoutX="37.0" layoutY="28.0" text="Database">
+                    <font>
+                        <Font name="Perpetua Bold Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Label layoutX="37.0" layoutY="77.0" text="Table name">
+                    <font>
+                        <Font name="Perpetua Bold Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Button fx:id="btnSELECT" layoutX="184.0" layoutY="101.0" mnemonicParsing="false" onAction="#onSelectButtonClick" style="-fx-background-color: fdb5ff;" text="SELECT" />
+                <TableView fx:id="tblEntrant" layoutX="26.0" layoutY="214.0" prefHeight="119.0" prefWidth="737.0" style="-fx-background-image: ffffff;" visible="false">
+                    <columns>
+                        <TableColumn fx:id="entrant_id" prefWidth="75.0" text="entrant_id" />
+                        <TableColumn fx:id="educations_id" prefWidth="91.20001220703125" text="educations_id" />
+                        <TableColumn fx:id="examss_id" prefWidth="72.0" text="examss_id" />
+                        <TableColumn fx:id="address" prefWidth="63.20001220703125" text="address" />
+                        <TableColumn fx:id="reg_number" prefWidth="75.0" text="reg_number" />
+                        <TableColumn fx:id="birth_date" prefWidth="75.0" text="birth_date" />
+                        <TableColumn fx:id="entrant_name" prefWidth="86.39996337890625" text="entrant_name" />
+                        <TableColumn fx:id="benefits" prefWidth="65.60003662109375" text="benefits" />
+                    </columns>
+                </TableView>
+                <TableView fx:id="tblEducation" layoutX="26.0" layoutY="334.0" prefHeight="141.0" prefWidth="738.0" style="-fx-background-image: ffffff;" visible="false">
+                    <columns>
+                        <TableColumn fx:id="education_id" prefWidth="75.0" text="education_id" />
+                        <TableColumn fx:id="entrant_group" prefWidth="88.00003814697266" text="entrant_group" />
+                        <TableColumn fx:id="education_establishment" prefWidth="112.79998779296875" text="education_establishment" />
+                        <TableColumn fx:id="reputation" minWidth="0.0" prefWidth="62.39996337890625" text="reputation" />
+                        <TableColumn fx:id="average_mark" minWidth="6.4000244140625" prefWidth="55.20001220703125" text="average_mark" />
+                        <TableColumn fx:id="Math_marks" prefWidth="63.99993896484375" text="Math_marks" />
+                        <TableColumn fx:id="Physics_marks" prefWidth="107.19992065429688" text="Physics_marks" />
+                        <TableColumn fx:id="Ukraine_language_marks" prefWidth="149.5999755859375" text="Ukraine_language_marks" />
+                    </columns>
+                </TableView>
+                <TableView fx:id="tblExams" layoutX="26.0" layoutY="492.0" prefHeight="106.0" prefWidth="738.0" style="-fx-background-image: ffffff;" visible="false">
+                    <columns>
+                        <TableColumn fx:id="exams_id" prefWidth="75.0" text="exams_id" />
+                        <TableColumn fx:id="Math" prefWidth="91.20001220703125" text="Math" />
+                        <TableColumn fx:id="Physics" prefWidth="72.0" text="Physics" />
+                        <TableColumn fx:id="Ukraine_language" prefWidth="104.0" text="Ukraine_language" />
+                        <TableColumn fx:id="exams_date" prefWidth="94.39996337890625" text="exams_date" />
+                    </columns>
+                </TableView>
+                <TextArea fx:id="txtLIST" layoutX="395.0" layoutY="48.0" prefHeight="90.0" prefWidth="426.0" />
+                <Label layoutX="417.0" layoutY="28.0" text="List of Tables">
+                    <font>
+                        <Font name="Perpetua Bold Italic" size="19.0" />
+                    </font>
+                </Label>
+            <TextField fx:id="txtSeach" layoutX="15.0" layoutY="152.0" style="-fx-background-color: ffffff;" />
+            <Label layoutX="29.0" layoutY="126.0" text="Seach Ouery">
+               <font>
+                  <Font name="Perpetua Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnConnection" layoutX="185.0" layoutY="51.0" mnemonicParsing="false" onAction="#onConnectButtonClick" style="-fx-background-color: fdb5ff;" text="Connection" />
+            </children>
+        </AnchorPane>
+        <Label layoutX="293.0" layoutY="14.0" prefHeight="66.0" prefWidth="226.0" text="ENTRANTS">
+            <font>
+                <Font name="Pristina" size="40.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

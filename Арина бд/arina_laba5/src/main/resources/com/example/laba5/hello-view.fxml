@@ -1,0 +1,95 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="729.0" prefWidth="859.0" style="-fx-background-color: #646D8F;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.laba5.HelloController">
+    <children>
+        <AnchorPane layoutX="-1.0" layoutY="77.0" prefHeight="651.0" prefWidth="859.0" style="-fx-background-color: #B2B8CF;">
+            <children>
+                <TextField fx:id="txtDatabase" layoutX="15.0" layoutY="51.0" promptText="enter database" style="-fx-background-color: ffffff;" />
+                <TextField fx:id="txttablename" layoutX="15.0" layoutY="101.0" style="-fx-background-color: ffffff;" />
+                <Label layoutX="37.0" layoutY="28.0" text="Database" textFill="WHITE">
+                    <font>
+                        <Font name="Perpetua Bold Italic" size="19.0" />
+                    </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+                </Label>
+                <Label layoutX="37.0" layoutY="77.0" text="Table name" textFill="WHITE">
+                    <font>
+                        <Font name="Perpetua Bold Italic" size="19.0" />
+                    </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+                </Label>
+                <Button fx:id="btnSELECT" layoutX="184.0" layoutY="101.0" mnemonicParsing="false" onAction="#onSelectButtonClick" text="SELECT" />
+                <TableView fx:id="tblCar" layoutX="26.0" layoutY="214.0" prefHeight="119.0" prefWidth="737.0" style="-fx-background-image: ffffff;" visible="false">
+                    <columns>
+                        <TableColumn fx:id="car_id" prefWidth="75.0" text="car_id" />
+                        <TableColumn fx:id="car_brand" prefWidth="133.60000610351562" text="car_brand" />
+                        <TableColumn fx:id="car_model" prefWidth="109.59999084472656" text="car_model" />
+                        <TableColumn fx:id="engine_number" prefWidth="143.99996948242188" text="engine_number" />
+                        <TableColumn fx:id="issue_year" prefWidth="112.80001831054688" text="issue_year" />
+                        <TableColumn fx:id="inspection_date" prefWidth="162.39996337890625" text="inspection_date" />
+                    </columns>
+                </TableView>
+                <TableView fx:id="tblClient" layoutX="26.0" layoutY="334.0" prefHeight="141.0" prefWidth="738.0" style="-fx-background-image: ffffff;" visible="false">
+                    <columns>
+                        <TableColumn fx:id="client_id" prefWidth="75.0" text="client_id" />
+                        <TableColumn fx:id="surname" prefWidth="116.79998779296875" text="surname" />
+                        <TableColumn fx:id="name" prefWidth="93.60005187988281" text="name" />
+                        <TableColumn fx:id="patronym" minWidth="0.0" prefWidth="86.4000244140625" text="patronym" />
+                        <TableColumn fx:id="address" minWidth="6.4000244140625" prefWidth="119.20001220703125" text="address" />
+                        <TableColumn fx:id="current_account" prefWidth="123.20001220703125" text="current_account" />
+                        <TableColumn fx:id="birth_year" prefWidth="124.7999267578125" text="birth_year" />
+                    </columns>
+                </TableView>
+                <TableView fx:id="tblPayment" layoutX="25.0" layoutY="476.0" prefHeight="106.0" prefWidth="738.0" style="-fx-background-image: ffffff;" visible="false">
+                    <columns>
+                        <TableColumn fx:id="payment_id" prefWidth="75.0" text="payment_id" />
+                        <TableColumn fx:id="cars_id" prefWidth="91.20001220703125" text="cars_id" />
+                        <TableColumn fx:id="clients_id" prefWidth="122.39999389648438" text="clients_id" />
+                        <TableColumn fx:id="arrival_date" prefWidth="160.79998779296875" text="arrival_date" />
+                        <TableColumn fx:id="departure_date" prefWidth="112.79998779296875" text="departure_date" />
+                  <TableColumn fx:id="price" prefWidth="176.79998779296875" text="price" />
+                    </columns>
+                </TableView>
+                <TextArea fx:id="txtLIST" layoutX="395.0" layoutY="48.0" prefHeight="90.0" prefWidth="426.0" />
+                <Label layoutX="417.0" layoutY="28.0" text="List of Tables" textFill="WHITE">
+                    <font>
+                        <Font name="Perpetua Bold Italic" size="19.0" />
+                    </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+                </Label>
+            <TextField fx:id="txtSeach" layoutX="15.0" layoutY="152.0" style="-fx-background-color: ffffff;" />
+            <Label layoutX="27.0" layoutY="126.0" text="Seach Ouery" textFill="WHITE">
+               <font>
+                  <Font name="Perpetua Bold Italic" size="19.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Button fx:id="btnConnection" layoutX="185.0" layoutY="51.0" mnemonicParsing="false" onAction="#onConnectButtonClick" text="Connection" />
+            </children>
+        </AnchorPane>
+        <Label layoutX="321.0" prefHeight="66.0" prefWidth="316.0" text="CAR PARKING" textFill="WHITE">
+            <font>
+                <Font name="Bodoni MT Poster Compressed" size="64.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
